@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+::selection{
+    background-color: rgb(255, 255, 255);
+    color:#9A54D6;
+}
+/* background: #9A54D6; */
+
+body{
+    background-color: #9A54D6;
+    overflow: hidden;
+}
+.navbar{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.brand-logo{
+    width: 10rem;
+    height: 3.6 rem;
+}
+.items-container{
+    display: flex;
+    align-items: center;
+}
+.profile-icon{
+    width: 6.5rem;
+    height: 1.8rem;
+    cursor: pointer;
+}
+ul{
+    display: flex;
+    color: white;
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+ul li{
+    margin-left: 5rem;
+}
+ul li:hover{
+    text-decoration: 1px solid underline;
+}
+.profile-container{
+    margin-left: 5rem;
+}
+.menu-container{
+    margin-left: 2rem;
+}
+.menu-icon{
+    width: 1.6rem;
+    height:0.9rem;
+    cursor: pointer;
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.right-side{
+    margin-left: 9rem;
+    width: 22rem;
+    /* border: 1px solid black; */
+    margin-top: 4rem;
+}
+.heading-container{
+    /* border: 1px solid black; */
+    width: 21rem;
+    color: white;
+}
+.heading{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.paragraph-container{
+    margin-top: 1.6rem;
+    /* border: 1px solid black; */
+    width: 19rem;
+}
+.paragraph{
+    color: white;
+    font-size: 0.8rem;
+}
+.join-container{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.join-button{
+    
+}
+.join-btn{
+    border: 1px solid white;
+    color: white;
+    background-color:#9A54D6;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.join-btn:hover{
+    background-color: white;
+    color: #9A54D6;
+
+}
+.play-icon-container{
+    margin-left: 0.875rem;
+}
+.play-button{
+    width: 2.188rem;
+    height: 2.188rem;
+}
+.watch-demo-container{
+    margin-left: 1.8rem;
+}
+.watch-demo{
+    color: white;
+    font-size: 0.8rem;
+}
+.find-container{
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.search-logo-container{
+    
+}
+.search-logo{
+    width: 1.2rem;
+    height: 1.2 rem;
+}
+.input-container{
+    margin-left: 1rem;
+    width: 70%;
+}
+.search-input{
+    border: none;
+    outline: none;
+    background-color:#9A54D6;
+
+}
+.search-input::placeholder{
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+.search-button{
+    color: blueviolet;
+    border: 1px solid white;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.search-button:hover{
+    background-color: #9A54D6;
+    border: 1px solid #ffffff;
+    color: white;
+}
+.left-side{
+    margin-right: 3.8rem;
+}
+.slider{
+    position: relative;
+    max-width: 37.5rem;
+    height: 42rem;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: -1rem;
+}
+input[type="radio"]
+{
+    display: none;
+}
+#slides{
+    display: flex;
+    flex-direction: column;
+    height: 400%;
+    transition: transform 0.5s ease-in-out;
+}
+.slide img{
+    display: block;
+    width: 33.438rem;
+    height: 30rem;
+    filter: drop-shadow(0px 0px 35px rgb(255, 231, 231));
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+#controls{
+    position: absolute;
+    left: 85%;
+    bottom: 60%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(50%);
+    gap: 0.625rem;
+}
+#controls label{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    /* background-color: rgb(247, 121, 121); */
+}
+#slide1:checked ~ #slides{
+    transform: translateY(0);
+}
+#slide2:checked ~ #slides{
+    transform: translateY(-25%);
+}
+#slide3:checked ~ #slides{
+    transform: translateY(-50%);
+}
+#slide4:checked ~ #slides{
+    transform: translateY(-75%);
+}
+#slide1:checked ~ #controls label[for="slide1"],
+#slide2:checked ~ #controls label[for="slide2"],
+#slide3:checked ~ #controls label[for="slide3"],
+#slide4:checked ~ #controls label[for="slide4"]{
+    background-color: rgb(255, 255, 255);
+    width: 1rem;
+    height: 1rem;
+}
